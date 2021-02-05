@@ -3,9 +3,6 @@
 	padding: 20px 25px;
 	align-items: center;
 	justify-content: center;
-	position: absolute;
-	bottom: 0;
-	left: 0;
 	z-index: 100;
 	width: 100%;
 }

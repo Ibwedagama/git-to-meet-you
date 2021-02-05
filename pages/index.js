@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
 import Background from '../components/Background'
-import Footer from '../components/Footer'
 import { FiSearch } from 'react-icons/fi'
 import { useRouter } from 'next/router'
 
@@ -42,7 +41,6 @@ export default function Home() {
 						</div>
 					</form>
 				</div>
-				<Footer />
 			</div>
 		</>
 	)
@@ -53,8 +51,8 @@ const gsapAnimation = () => {
 		opacity: 0,
 		y: -30,
 		ease: 'expo.InOut',
-		duration: 1.5,
-		stagger: 0.4,
+		duration: 1.2,
+		stagger: 0.3,
 		delay: 0.5,
 	})
 	gsap.from('.animate2', {

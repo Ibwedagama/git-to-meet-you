@@ -1,5 +1,4 @@
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 import Sidebar from '../components/Sidebar'
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
@@ -27,7 +26,6 @@ const Layout = ({ children }) => {
 			<Navbar toggleSidebar={toggleSidebar} />
 			<Sidebar sidebarOpen={sidebar} toggleSidebar={toggleSidebar} />
 			{children}
-			<Footer />
 		</div>
 	)
 }

@@ -59,12 +59,13 @@
 @media(min-width: 700px){
     .input {
         width: clamp(300px, 500px, 650px);
-        height: 55px;
+        height: 45px;
         font: 24px 'PT Sans';
         padding: 12px 38px;
     }
     .searchButton{
-        height: 55px;
+        height: 45px;
+        padding: 0 24px;
     }
     .searchButton .label {
         display: block;
