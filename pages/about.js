@@ -1,15 +1,21 @@
 import styles from '../styles/About.module.css'
 import Head from 'next/head'
 import Background from '../components/Background'
+import { useEffect } from 'react'
 
 const about = () => {
+
+    useEffect(() => {
+			gsapAnimation()
+		}, [])
+    
 	return (
 		<>
 			<Head></Head>
 			<Background />
 			<div className={styles.about}>
-				<h1 className={styles.title}>About Git to Meet You!</h1>
-				<p className={styles.subtitle}>
+				<h1 className={`${styles.title} animateAbout`}>About Git to Meet You!</h1>
+				<p className={`${styles.subtitle} animateAbout`}>
 					Hello everyone, I’m Ibwedagama. I created this app using{' '}
 					<a href='https://nextjs.org/' target='_blank' rel='noreferrer'>
 						Next.Js
@@ -44,6 +50,17 @@ const about = () => {
 			</div>
 		</>
 	)
+}
+
+const gsapAnimation = () => {
+	gsap.from('.animateAbout', {
+		opacity: 0,
+		duration: 1.5,
+		y: -30,
+		ease: 'expo.InOut',
+		delay: 0.5,
+		stagger: 0.5,
+	})
 }
 
 export default about
