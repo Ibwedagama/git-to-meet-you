@@ -1,12 +1,17 @@
 import styles from '../styles/About.module.css'
 import Head from 'next/head'
 import Background from '../components/Background'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 const about = () => {
 
+	const [ready, setReady] = useState(false)
+
     useEffect(() => {
 			gsapAnimation()
+			setTimeout(() => {
+				setReady(true)
+			}, 2000)
 		}, [])
     
 	return (
@@ -14,7 +19,7 @@ const about = () => {
 			<Head>
 				<title>About Git to Meet You!</title>
 			</Head>
-			<Background />
+			<Background ready={ready} />
 			<div className={styles.about}>
 				<h1 className={`${styles.title} animateAbout`}>About Git to Meet You!</h1>
 				<p className={`${styles.subtitle} animateAbout`}>

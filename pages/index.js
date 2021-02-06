@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 
 export default function Home() {
 	const [users, setUsers] = useState('')
+	const [ready, setReady] = useState(false)
 	const router = useRouter()
 
 	const handleSubmit = (e) => {
@@ -17,11 +18,14 @@ export default function Home() {
 
 	useEffect(() => {
 		gsapAnimation()
+		setTimeout(() => {
+			setReady(true)
+		}, 2000)
 	}, [])
 
 	return (
 		<>
-			<Background />
+			<Background ready={ready} />
 			<div className={styles.home}>
 				<div className={styles.hero}>
 					<h1 className={`${styles.title} animate`}>Hi, Git to Meet You!</h1>

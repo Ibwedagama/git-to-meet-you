@@ -1,20 +1,9 @@
 import styles from '../styles/Sidebar.module.css'
 import Link from 'next/link'
 import { FiX } from 'react-icons/fi'
-import { useEffect } from 'react'
+
 
 const Sidebar = ({ toggleSidebar, sidebarOpen }) => {
-	useEffect(() => {
-		gsap.from('.animateSidebar', {
-			opacity: 0,
-			ease: 'expo.InOut',
-			duration: 1,
-			stagger: 0.2,
-			x: -20,
-		})
-		return null
-	}, [!sidebarOpen])
-
 	return (
 		<div className={sidebarOpen ? `${styles.sidebar} ${styles.open}` : `${styles.sidebar}`}>
 			<div className={styles.closeButton}>
