@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import SearchBar from '../../components/SearchBar'
 import styles from '../../styles/Users.module.css'
 import UsersCard from '../../components/UsersCard'
+import NotFound from '../../components/UserNotFound'
 
 const users = ({ data }) => {
 	const router = useRouter()
@@ -11,6 +12,15 @@ const users = ({ data }) => {
 	useEffect(() => {
 		gsapAnimation()
 	}, [data])
+
+	let notFound = null
+
+	console.log(data.total_count)
+
+	if (data.total_count < 1) {
+		console.log('not found')
+		notFound = <NotFound />
+	} 
 
 	return (
 		<div className={styles.wrapper}>
@@ -22,6 +32,7 @@ const users = ({ data }) => {
 			</div>
 			<div className={styles.cardContainer}>
 				<p className={`${styles.subtitle} ${styles.secondary}`}>Search result for "{users}" :</p>
+				{notFound}
 				<div className={styles.cardList}>
 					{data.items.map((user) => {
 						return <UsersCard key={user.id} imgUrl={user.avatar_url} userName={user.login} />
