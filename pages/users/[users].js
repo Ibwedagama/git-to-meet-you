@@ -33,7 +33,7 @@ const users = ({ data }) => {
 }
 
 export async function getServerSideProps({ params }) {
-	const res = await fetch(`https://api.github.com/search/users?q=${params.users}&per_page=12`)
+	const res = await fetch(`https://api.github.com/search/users?q=${params.users}&per_page=9`)
 	const data = await res.json()
 	return {
 		props: {

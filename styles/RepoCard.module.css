@@ -1,0 +1,118 @@
+.repoCard {
+	padding: 17px 21px;
+	display: flex;
+	flex-direction: column;
+	background: #ffffff;
+	box-shadow: 0px 16px 20px rgba(0, 0, 0, 0.12);
+	border-radius: 20px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.repoCard:hover {
+	transition: 0.25s ease-in;
+	box-shadow: 0px 16px 45px rgba(128, 128, 128, 0.45);
+	transform: scale(1.02) !important;
+}
+
+.header {
+	display: flex;
+	width: 100%;
+	column-gap: 15px;
+	align-items: center;
+	margin-bottom: 12px;
+}
+
+.header svg {
+	font-size: 1.2rem;
+	color: #36b278;
+}
+
+.header .repoTitle {
+	font-family: 'Cairo';
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 30px;
+	color: #333333;
+	margin: 0;
+}
+
+.header .repoTitle:hover {
+    color: #36b278;
+    transition: 0.2s ease-in;
+}
+
+.body {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.body p {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 16px;
+	color: #808080;
+	margin: 0;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer .left {
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+}
+
+.footer p {
+	display: flex;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 16px;
+	color: #333333;
+	align-items: center;
+	column-gap: 10px;
+	margin: 0;
+}
+
+.footer svg {
+	font-size: 1rem;
+	color: #808080;
+}
+
+.footer .right {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.circle {
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: #dde545;
+}
+
+@media (min-width: 700px) {
+	.repoCard {
+		padding: 17px 32px;
+	}
+	.header .repoTitle {
+		font-size: 18px;
+	}
+	.body p {
+		font-size: 14px;
+		line-height: 180%;
+	}
+	.footer .left {
+		column-gap: 15px;
+	}
+	.footer p {
+		font-size: 13px;
+	}
+}

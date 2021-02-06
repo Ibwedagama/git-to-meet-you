@@ -1,0 +1,218 @@
+.wrapper {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.banner {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	padding: 141px 25px;
+	padding-bottom: 120px;
+	justify-content: center;
+	align-items: center;
+	background: #262626;
+}
+
+.banner .avatar {
+	width: 100px;
+	height: 100px;
+	border: 8px solid #36b278;
+	box-shadow: 0px 0px 40px rgba(54, 179, 120, 0.5);
+	margin-bottom: 25px;
+	border-radius: 50%;
+}
+
+.banner .title {
+	margin: 0;
+	margin-bottom: 5px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 31px;
+	text-align: center;
+	color: #f2f2f2;
+}
+
+.banner .subtitle {
+	margin: 0;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 30px;
+	text-align: center;
+	color: #36b378;
+	margin-bottom: 25px;
+}
+
+.banner .userInfo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 15px;
+}
+
+.banner .userInfo p {
+	display: flex;
+	align-items: center;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+	color: #f2f2f2;
+	margin: 0;
+}
+
+.banner .userInfo svg {
+	font-size: 1.1rem;
+	color: #f2f2f2;
+	margin-right: 12px;
+}
+
+.userRepos {
+	padding: 0 25px;
+	width: 100%;
+	padding-bottom: 200px;
+	background: #d9d9d9;
+}
+
+.userNumbers {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	position: relative;
+	top: -30px;
+}
+
+.userNumbers .followerCard {
+	padding: 15px;
+	background: #ffffff;
+	box-shadow: 0px 16px 25px rgba(0, 0, 0, 0.05);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.userNumbers .followerCard h3 {
+	margin: 0;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 18px;
+	text-align: center;
+	color: #36b378;
+	margin-bottom: 5px;
+}
+
+.userNumbers .followerCard p {
+	margin: 0;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	line-height: 13px;
+	text-align: center;
+	letter-spacing: 0.1em;
+	color: #333333;
+}
+
+.repoHeader {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 31px;
+	color: #333333;
+}
+
+.repoList {
+	width: 100%;
+	display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 35px;
+}
+
+@media (min-width: 700px) {
+	.banner {
+		padding-bottom: 150px;
+	}
+
+	.banner .avatar {
+		width: 128px;
+		height: 128px;
+		margin-bottom: 50px;
+	}
+
+	.banner .title {
+		font-size: 48px;
+		margin-bottom: 25px;
+	}
+
+	.banner .subtitle {
+        font-family: 'Cairo';
+		font-size: 28px;
+		margin-bottom: 53px;
+    }
+    
+    .banner .subtitle:hover {
+        transition: 0.3s ease-in;
+        color: #2E9967;
+    }
+
+	.banner .userInfo {
+		flex-direction: row;
+		column-gap: 85px;
+	}
+
+	.banner .userInfo p {
+		font-size: 1.5rem;
+	}
+	.banner .userInfo svg {
+		font-size: 1.5rem;
+	}
+
+	.userRepos {
+		padding: 0 150px;
+		padding-bottom: 200px;
+	}
+
+	.userNumbers {
+		justify-content: center;
+		column-gap: 80px;
+		top: -50px;
+	}
+
+	.userNumbers .followerCard {
+		padding: 0;
+		width: 298px;
+		height: 141px;
+	}
+
+	.userNumbers .followerCard h3 {
+		font-size: 24px;
+		line-height: 31px;
+		margin-bottom: 25px;
+	}
+
+	.userNumbers .followerCard p {
+		font-size: 16px;
+		line-height: 21px;
+	}
+
+	.repoHeader {
+        font-size: 24px;
+        margin-bottom: 40px;
+	}
+
+	.repoList {
+		grid-template-columns: repeat(3, 1fr);
+		row-gap: 35px;
+		column-gap: 35px;
+	}
+}
