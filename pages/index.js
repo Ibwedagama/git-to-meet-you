@@ -40,7 +40,9 @@ export default function Home() {
 								value={users}
 							/>
 							<span className='animate'>
-								<FiSearch />
+								<button type='submit' className={styles.submit}>
+										<FiSearch />
+								</button>
 							</span>
 						</div>
 					</form>
