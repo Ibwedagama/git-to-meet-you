@@ -4,6 +4,7 @@ import { FiCalendar } from 'react-icons/fi'
 import RepoCard from '../../components/RepoCard'
 import moment from 'moment'
 import { useEffect } from 'react'
+import Head from 'next/head'
 
 const User = ({ userData, userRepos }) => {
 	useEffect(() => {
@@ -12,6 +13,9 @@ const User = ({ userData, userRepos }) => {
 
 	return (
 		<div className={styles.wrapper}>
+			<Head>
+				<title> {userData.login} | Git to Meet You!</title>
+			</Head>
 			<section className={styles.banner}>
 				<img
 					src={userData.avatar_url}

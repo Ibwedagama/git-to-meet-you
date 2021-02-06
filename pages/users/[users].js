@@ -4,6 +4,7 @@ import SearchBar from '../../components/SearchBar'
 import styles from '../../styles/Users.module.css'
 import UsersCard from '../../components/UsersCard'
 import NotFound from '../../components/UserNotFound'
+import Head from 'next/head'
 
 const users = ({ data }) => {
 	const router = useRouter()
@@ -15,15 +16,16 @@ const users = ({ data }) => {
 
 	let notFound = null
 
-	console.log(data.total_count)
-
 	if (data.total_count < 1) {
 		console.log('not found')
 		notFound = <NotFound />
-	} 
+	}
 
 	return (
 		<div className={styles.wrapper}>
+			<Head>
+					<title>Search User | Git to Meet You!</title>
+			</Head>
 			<div className={styles.users}>
 				<section className={styles.searchBar}>
 					<p className={styles.subtitle}>Find Github user here :</p>

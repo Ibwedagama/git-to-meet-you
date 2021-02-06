@@ -23,9 +23,14 @@ const Navbar = ({ toggleSidebar }) => {
 						</Link>
 					</li>
 					<li className='animate2'>
-						<Link href='/test' className={`${styles.link} `}>
+						<a
+							href='https://github.com/Ibwedagama/git-to-meet-you'
+							target='_blank'
+							rel='noopener'
+							className={`${styles.link} `}
+						>
 							Github Repo
-						</Link>
+						</a>
 					</li>
 				</ul>
 				<div className={`${styles.sidebarToggle} animate2`}>

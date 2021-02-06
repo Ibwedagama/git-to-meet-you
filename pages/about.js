@@ -11,7 +11,9 @@ const about = () => {
     
 	return (
 		<>
-			<Head></Head>
+			<Head>
+				<title>About Git to Meet You!</title>
+			</Head>
 			<Background />
 			<div className={styles.about}>
 				<h1 className={`${styles.title} animateAbout`}>About Git to Meet You!</h1>
